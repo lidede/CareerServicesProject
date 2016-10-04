@@ -6,7 +6,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
+<style>
+ form {
+    border: 0px solid #f1f1f1;
+}
 
+input[type=text], input[type=password] {
+    width: 20%;
+    padding: 10px 2px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 4px solid #ccc;
+    border-radius:10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: White;
+    padding: 14px 20px;
+    margin: 3px 0;
+    border: none;
+    border-radius:20px;
+    cursor: pointer;
+    width: 20%;
+    }
+    
+    </style>
 <a href="AdminHome"> Return to Admin Home</a>
 <h2>Form Correction</h2>
 <form>
