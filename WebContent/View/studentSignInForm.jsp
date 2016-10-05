@@ -6,9 +6,60 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
+    <style>form {
+    border: 0px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 20%;
+    padding: 8px 2px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 4px solid #ccc;
+    border-radius:10px;
+    box-sizing: border-box;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 1px 0 1px 0;
+}
+
+img.avatar {
+    width: 10%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: White;
+    padding: 14px 20px;
+    margin: 3px 0;
+    border: none;
+    border-radius:20px;
+    cursor: pointer;
+    width: 20%;
+    }
+    
+    </style>
 <body>
+    <form action="action_page.php">
+  <div class="imgcontainer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Kean_University_Logo.svg/1034px-Kean_University_Logo.svg.png" alt="Avatar" class="avatar">
+  </div>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+
 <BR>
-Welcome to Career Services
+    <center>
+<h1>Welcome to Career Services</h1>
+</center>
 <!--  -->
 <style type="text/css">
     .container {
@@ -26,29 +77,29 @@ Welcome to Career Services
 <input type ="checkbox" name = "activity" value ="walk_in"> Appointment
 <input type ="checkbox" name = "activity" value ="walk_in"> Workshop
 
-
-<body>
+<form action = "Success" method = "post">
 	<div class = "container">
-		<form action = "Success" method = "post">
+		
 			Name : <input type = "text" name = "name">
 			<br>
 			ID     : <input type = "text" name = "id" >
 			<br>
+			Kean E-mail :<input type = "text" name = "id" >
+			<br>
 			Phone Number : <input type = "text" name = "phone_number" >
 			<br>
-			Appointment Time : <input type ="text" name ="phone_number">
+			Arrival Time : <input type ="text" name ="phone_number">
 			<br>
 	</div>
+	
 <center>
-	<font size = "3"> Enrollment Status</font>
-	<br>
-		Section A
-	<br>
+
+		<h4> Section A </h4>
+		Enrollment Status<br>
 		<input type ="checkbox" name = "en_time" value ="full_time"> Full-time
 		<input type ="checkbox" name = "en_time" value ="part_time"> Part-time
-	<br>
-		Section B 
-	<br>
+
+		<h4>Section B </h4>
 	<input type ="checkbox" name = "en_stat" value ="fresh"> Freshman
 	<input type ="checkbox" name = "en_stat" value ="soph"> Sophmore
 	<input type ="checkbox" name = "en_stat" value ="juni"> Junior
@@ -57,9 +108,11 @@ Welcome to Career Services
 	<input type ="checkbox" name = "en_stat" value ="alum"> Alumni
 	<input type ="checkbox" name = "en_stat" value ="poten"> Potential Student
 </center>
-<br>
-<center>	
+
+<center>
+    <h4>	
 	Please check the boxes that apply to your visit
+	</h4>
 	<br>
 	Career Counseling <input type ="checkbox" name = "cc" value ="cc"><br>
 	Job Searching <input type ="checkbox" name = "js" value ="js"><br>
@@ -77,8 +130,8 @@ Welcome to Career Services
 
 </center>
 <br>
-<input type = "submit">
-</form>
+<button type = "submit">Submit</button>
 
+</form>
 </body>
 </html>
