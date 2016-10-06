@@ -1,0 +1,27 @@
+Setup
+------
+
+1.  Download xampp	https://www.apachefriends.org/download.html
+2. Install to c:\ directory
+3.  After Installation start the following through  XAMPP console
+	a. mySQL
+	b. Apache
+	c. Tomcat *currently not being used, is needed for jsp intergration*
+4. Navigate to localhost/phpmyadmin or 127.0.0.1
+	a. Username is "root" password is blank
+	b. This is where any database management will occur
+	
+Database
+-----------
+Two databases created
+	1.  db_login
+		a.  have inserted credential for Blanca into this database for early integration testing
+	2.  student_form
+		a. Total of 31 columns matching the current studentform page witht the additional variable of Blanca approval.
+Notes
+------
+
+Currently trying to find a way for me to push changes to the database out to everyone.
+Will have as part of the test branch the mySQL export file to attempt to make pushes as needed this way.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
