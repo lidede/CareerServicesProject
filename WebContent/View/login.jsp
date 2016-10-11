@@ -60,7 +60,7 @@ span.psw {
 <h2>Admin Log in</h2>
 </center>
 
-<form action="action_page.php">
+<form action="AdminHome" method="post">
   <div class="imgcontainer">
     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Kean_University_Logo.svg/1034px-Kean_University_Logo.svg.png" alt="Avatar" class="avatar">
   </div>
@@ -69,7 +69,7 @@ span.psw {
     <label><b>Kean E-Mail</b></label>
     <input type="text" placeholder="Enter E-mail Address" name="username" required>
 
-<label><b>Password</b></label>
+	<label><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
         
     <button type="submit">LET ME IN !</button>
@@ -81,6 +81,6 @@ span.psw {
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
-
+<a href="StudentSignIn">Redirect to Student Sign In</a>
 </body>
 </html>
