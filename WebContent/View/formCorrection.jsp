@@ -6,9 +6,37 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
+<style>
+ form {
+    border: 0px solid #f1f1f1;
+}
 
-<a href="AdminHome"> Return to Admin Home</a>
+input[type=text], input[type=password] {
+    width: 20%;
+    padding: 10px 2px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 4px solid #ccc;
+    border-radius:10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: White;
+    padding: 14px 20px;
+    margin: 3px 0;
+    border: none;
+    border-radius:20px;
+    cursor: pointer;
+    width: 20%;
+    }
+    
+    </style>
+<body>
+    <center>
 <h2>Form Correction</h2>
+</center>
 <form>
 <select name="select" id="select_k1" class="xla_k">
     <option value="Select">Select</option>
@@ -16,12 +44,11 @@
 <option value="Student Name">Student Name</option>
     </select>
       <input type="text" placeholder="Search for the Key Words">
-      <input type="submit" value="Search">
+      <button type="submit" value="Search"> Search</button>
 </form>
 <h3>Career Development & Advancement</h3>
 <h1>Sign In</h1>
 
-<body>
 
 
 <form>
@@ -50,21 +77,22 @@ Time out:
 <br>
 Name:
 <input type="text" name="Name" value="">
-<br>
 Cell Number:
 <input type="text" name="Cell Number" value="">
+<br>
 Home Number:
 <input type="text" name="Home Number" value="">
 Email Address:
 <input type="text" name="Email Address" value="">
 
-</fieldset>
 
-<span>************************************************************************************************************************************************************</span>
+</fieldset>
+</form>
+<span>******************************************************************************************************</span>
 
 <fieldset>
 
-<legend>ENROLLMENT STATUS:(check the box)</legend>
+<legend><b>ENROLLMENT STATUS:(check the box)</b></legend>
 <span>Section(A):</span>
 <input type="radio" name="SectionA" value="Full-Time" checked>Full-Time
 <input type="radio" name="SectionA" value="Part-Time">Part-Time
@@ -80,7 +108,7 @@ Email Address:
 
 </fieldset>
 
-<span>************************************************************************************************************************************************************</span>
+<span>******************************************************************************************************</span>
 
 <fieldset>
 
@@ -88,7 +116,7 @@ Email Address:
 
 <fieldset>
 
-<legend>APPOINTMENTS</legend>
+<legend><b>APPOINTMENTS</b></legend>
 
 <form action="" method="get"> 
 <label><input name="choice" type="checkbox" value="" />Career Counseling </label> 
@@ -104,7 +132,7 @@ Email Address:
 
 <fieldset>
 
-<legend>WORKSHOPS</legend>
+<legend><b>WORKSHOPS</b></legend>
 
 <form action="" method="get"> 
 <label><input name="choice" type="checkbox" value="" />How to Choose a Major </label> 
@@ -120,10 +148,10 @@ Email Address:
 
 <fieldset>
 
-<legend>CLASSES</legend>
+<legend><b>CLASSES</b></legend>
 
 <form action="" method="get"> 
-<label><input name="choice" type="checkbox" value="" />Transitionto Kean(T2K) </label> 
+<label><input name="choice" type="checkbox" value="" />Transition to Kean(T2K) </label> 
 <label><input name="choice" type="checkbox" value="" />Sophomore Seminar </label> 
 <label><input name="choice" type="checkbox" value="" />Junior Seminar </label> 
 <label><input name="choice" type="checkbox" value="" />Senior Seminar </label> 
@@ -136,7 +164,7 @@ Email Address:
 
 <fieldset>
 
-<legend>SELF HELP</legend>
+<legend><b>SELF HELP</b></legend>
 
 <form action="" method="get"> 
 <label><input name="choice" type="checkbox" value="" />Job Searching </label> 
@@ -148,7 +176,7 @@ Email Address:
 
 <fieldset>
 
-<legend>TESTS</legend>
+<legend><b>TESTS</b></legend>
 
 <form action="" method="get"> 
 <label><input name="choice" type="checkbox" value="" />COPS(Career Interest Test) </label> 
@@ -159,7 +187,7 @@ Email Address:
 
 </fieldset>
 
-</form>
+
 
 <span>*** Have you SIGNED up for COLLEGE CENTRAL yet?</span>
 <input type="radio" name="sign" value="YES" checked>YES
@@ -167,7 +195,7 @@ Email Address:
 <span>***</span>
 
 <br><br>
-<input type="submit" value="Submit">
+<button type="submit" value="Submit">Submit</button>
 
 </body>
 </html>
