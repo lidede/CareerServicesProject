@@ -21,10 +21,10 @@ Welcome to Career Services
     }
 </style>
 <a href="Login">Log out</a>
-<input type ="checkbox" name = "activity" value ="walk_in"> Walk-in
-<input type ="checkbox" name = "activity" value ="class"> Class
-<input type ="checkbox" name = "activity" value ="walk_in"> Appointment
-<input type ="checkbox" name = "activity" value ="walk_in"> Workshop
+<input type ="radio" name = "activity" value ="walk_in"> Walk-in
+<input type ="radio" name = "activity" value ="class"> Class
+<input type ="radio" name = "activity" value ="appoint"> Appointment
+<input type ="radio" name = "activity" value ="workshop"> Workshop
 
 
 <body>
@@ -36,7 +36,7 @@ Welcome to Career Services
 			<br>
 			Phone Number : <input type = "text" name = "phone_number" >
 			<br>
-			Appointment Time : <input type ="text" name ="phone_number">
+			Arrival Time : <input type ="text" name ="arrival_time">
 			<br>
 	</div>
 <center>
@@ -44,18 +44,18 @@ Welcome to Career Services
 	<br>
 		Section A
 	<br>
-		<input type ="checkbox" name = "en_time" value ="full_time"> Full-time
-		<input type ="checkbox" name = "en_time" value ="part_time"> Part-time
+		<input type ="radio" name = "en_time" value ="full_time"> Full-time
+		<input type ="radio" name = "en_time" value ="part_time"> Part-time
 	<br>
 		Section B 
 	<br>
-	<input type ="checkbox" name = "en_stat" value ="fresh"> Freshman
-	<input type ="checkbox" name = "en_stat" value ="soph"> Sophmore
-	<input type ="checkbox" name = "en_stat" value ="juni"> Junior
-	<input type ="checkbox" name = "en_stat" value ="fresh"> Senior
-	<input type ="checkbox" name = "en_stat" value ="grad"> Graduate Student
-	<input type ="checkbox" name = "en_stat" value ="alum"> Alumni
-	<input type ="checkbox" name = "en_stat" value ="poten"> Potential Student
+	<input type ="radio" name = "en_stat" value ="fresh"> Freshman
+	<input type ="radio" name = "en_stat" value ="soph"> Sophmore
+	<input type ="radio" name = "en_stat" value ="juni"> Junior
+	<input type ="radio" name = "en_stat" value ="seni"> Senior
+	<input type ="radio" name = "en_stat" value ="grad"> Graduate Student
+	<input type ="radio" name = "en_stat" value ="alum"> Alumni
+	<input type ="radio" name = "en_stat" value ="poten"> Potential Student
 </center>
 <br>
 <center>	
