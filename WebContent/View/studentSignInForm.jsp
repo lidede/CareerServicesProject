@@ -2,10 +2,71 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-    <style>form {
-    border: 0px solid #f1f1f1;
+<style>
+#main{
+  position: relative;
 }
+div#first{
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Kean_University_Logo.svg/1034px-Kean_University_Logo.svg.png);
+  opacity: 0.15;
+  width:  100%;
+  height: 100%;
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+div#second{
+  width:100%;
+  height: 100%;
+  position: absolute;
+  top: 0 ;
+  left:0;
+}
+h2 {
+    background-color: #FF9B05;
+    color: White;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border: 1px;
+    border-radius:20px;
+    width: 15%;
+    font-size: 117%;
+    text-align: center;
 
+}
+h1{
+  background-color: #FF0569;
+  color: White;
+  padding: 10px 10px;
+  margin: 10px 0;
+  border: 1px;
+  border-radius:20px;
+  width: 40%;
+  font-size: 117%;
+  text-align: center;
+}
+h3 {
+    background-color: #02e802;
+    color: White;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border: 1px;
+    border-radius:20px;
+    width: 30%;
+    font-size: 117%;
+    text-align: center;
+
+}
+form {
+    border: 0px solid #f1f1f1;
+
+}
+body{
+  background-color: #CCFFFF;
+  font-size: 110%;
+
+}
 input[type=text], input[type=password] {
     width: 25%;
     padding: 8px 2px;
@@ -14,6 +75,8 @@ input[type=text], input[type=password] {
     border: 4px solid #ccc;
     border-radius:10px;
     box-sizing: border-box;
+    font-size: 100%;
+    text-align: center;
 }
 .imgcontainer {
     text-align: center;
@@ -38,16 +101,15 @@ button {
     border-radius:20px;
     cursor: pointer;
     width: 20%;
+    font-size: 117%;
     }
-    
     </style>
 <body>
-    <form action="action_page.php">
-  <div class="imgcontainer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Kean_University_Logo.svg/1034px-Kean_University_Logo.svg.png" alt="Avatar" class="avatar">
+  <div id="main">
+  <div id="first">
   </div>
-
-
+  <div id="second">
+    <form action="action_page.php">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 
@@ -56,59 +118,55 @@ button {
     <center>
 <h1>Welcome to Career Services</h1>
 </center>
-<!--  -->
-<a href="Login">Log out</a>
-<input type ="checkbox" name = "activity" value ="walk_in"> Walk-in
-<input type ="checkbox" name = "activity" value ="class"> Class
-<input type ="checkbox" name = "activity" value ="walk_in"> Appointment
-<input type ="checkbox" name = "activity" value ="walk_in"> Workshop
-
+<!-- took out the logout (Kelsey 10/13/16)-->
+<input type ="checkbox" name = "activity" value ="walk_in">Walk-in
+<input type ="checkbox" name = "activity" value ="class">Class
+<input type ="checkbox" name = "activity"  value ="appointment">Appointment
+<input type ="checkbox" name = "activity" value ="workshop">Workshop
+<center>
 <form action = "Success" method = "post">
-	<div class = "container">
-		
-			Name : 
-			<br>
-			<input type = "text" name = "name">
-			<br>
-			ID     : 
-			<br>
-			<input type = "text" name = "id" >
-			<br>
-			Kean E-mail :
-			<br>
-			<input type = "text" name = "id" >
-			<br>
-			Phone Number : 
-			<br>
-			<input type = "text" name = "phone_number" >
-			<br>
-			Arrival Time : 
-			<br>
-			<input type ="text" name ="phone_number">
-			<br>
-	</div>
-	
-<center>
 
-		<h4> Section A </h4>
-	<i>	Enrollment Status</i><br>
-		<input type ="checkbox" name = "en_time" value ="full_time"> Full-time
-		<input type ="checkbox" name = "en_time" value ="part_time"> Part-time
+			<br>
+			<input type = "text" name = "name" placeholder="Name">
+			<br>
+			<br>
+			<input type = "text" name = "id" placeholder="ID" font-size="90%">
+			<br>
+			<br>
+			<input type = "text" name = "id" placeholder="Kean E-mail" >
+			<br>
+			<br>
+			<input type = "text" name = "phone_number" placeholder="Phone Number" >
+			<br>
+			<br>
+			<input type ="text" name ="phone_number" placeholder="Arrival Time">
+			<br>
+  </center>
 
-		<h4>Section B </h4>
-	<input type ="checkbox" name = "en_stat" value ="fresh"> Freshman
-	<input type ="checkbox" name = "en_stat" value ="soph"> Sophmore
-	<input type ="checkbox" name = "en_stat" value ="juni"> Junior
-	<input type ="checkbox" name = "en_stat" value ="fresh"> Senior
-	<input type ="checkbox" name = "en_stat" value ="grad"> Graduate Student
-	<input type ="checkbox" name = "en_stat" value ="alum"> Alumni
-	<input type ="checkbox" name = "en_stat" value ="poten"> Potential Student
+		<h2> Section A </h2>
+  <Center>
+	<b><i><h3>	Enrollment Status</h3></i></b>
+  <br>
+		<input type ="radio" name = "en_time" value ="full_time"> Full-time
+		<input type ="radio" name = "en_time" value ="part_time"> Part-time
 </center>
+<br>
+		<h2>Section B </h2>
+  <center>
 
+	<input type ="radio" name = "en_stat" value ="fresh"> Freshman<br>
+	<input type ="radio" name = "en_stat" value ="soph"> Sophmore<br>
+	<input type ="radio" name = "en_stat" value ="juni"> Junior<br>
+	<input type ="radio" name = "en_stat" value ="fresh"> Senior<br>
+	<input type ="radio" name = "en_stat" value ="grad"> Graduate Student<br>
+	<input type ="radio" name = "en_stat" value ="alum"> Alumni<br>
+	<input type ="radio" name = "en_stat" value ="poten"> Potential Student<br>
+</center>
+<br>
 <center>
-    <h4>	
+    <i><h3>
 	Please check the boxes that apply to your visit
-	</h4>
+</h3></i>
 	<br>
 	Career Counseling <input type ="checkbox" name = "cc" value ="cc"><br>
 	Job Searching <input type ="checkbox" name = "js" value ="js"><br>
@@ -127,7 +185,7 @@ button {
 </center>
 <br>
 <button type = "submit">Submit</button>
-
+</div>
 </form>
 </body>
 </html>
