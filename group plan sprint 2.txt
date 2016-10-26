@@ -1,0 +1,19 @@
+Iteration 2
+
+Features Needed
+Database Connect
+Database Add Record
+Database Show Table 
+Database Form Correction
+
+Thursday -Database Connect
+Wednesday - Add record(Dave + Bryce + Michael)
+Thursday - Add Record (Dave +Bryce + Michael) Show Table from database (Collins +Kelsey) 
+Friday Show databse (Patrick + Michael)
+Sat
+Sun
+Monday - Form Correction (Patrick + Michael) 
+Tuesday -Plan Deliveables
+Wednesday -testing
+thursday - hand in deliverables
+
