@@ -13,13 +13,14 @@ public class DBtest
 	public static void main(String[] args)
 	{
 		
-		MysqlXADataSource dataSource = new MysqlXADataSource(); //configuring the connection 
+		MysqlXADataSource dataSource = new MysqlXADataSource(); //configuring the Database/data source 
 		dataSource.setUser("root");
 		dataSource.setPassword("");
 		dataSource.setServerName("localhost");
 		dataSource.setDatabaseName("CareerServices");
 		try
 		{
+			//creating test varibles 
 			int id = 922298;
 			String name = "David Veloso";
 			String email = "velosoda@kean.edu";
@@ -51,11 +52,16 @@ public class DBtest
 			byte copsTest = 0;
 			byte myersbriggs = 0;
 			byte approved = 0;
+			//putting the query to insert in to a string 
 			String query = "insert into student_form(ID,Name,Email,Phone_Number,Arrival,Walk_In,Class,Appointment,Workshop,Full_Time,Part_Time,Freshman,Sophomore,Junior,Senior,Alumni,Potential_Student,Career_Counseling,Job_Searching,Resume,Cover_Letter,Mock_Interview,Internship_Information,Transistion_to_Kean,Sophomore_Seminar,Junior_Seminar,Senior_Seminar,Career,Cops_Test,Myers_Briggs,Approved)"
-					+ " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
-			Connection conn = dataSource.getConnection(); //create connection
+				+ " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+			//each question mark represents a variable we want to pass through
+			//create connection
+			Connection conn = dataSource.getConnection();
 			System.out.println("connected");
+			//create preparedStatement to run the query
 			PreparedStatement insert = conn.prepareStatement(query);
+			//putting the test variables into the query
 			insert.setInt(1, id);
 			insert.setString(2, name);
 			insert.setString(3,email);
@@ -87,8 +93,10 @@ public class DBtest
 			insert.setByte(29, copsTest);
 			insert.setByte(30, myersbriggs);
 			insert.setByte(31, approved);
+			//execute the query
 			insert.execute();
 			System.out.println("Query Executed");
+			//close everything to prevent memory leaks
 			insert.close();
 			conn.close();
 		}
