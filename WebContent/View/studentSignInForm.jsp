@@ -7,78 +7,72 @@
 <title>Insert title here</title>
 </head>
 <body>
+<a href="Login" class="buttonLogout">Log out</a>
 <BR>
-Welcome to Career Services
-<!--  -->
-<style type="text/css">
-    .container {
-        width: 500px;
-        clear: both;
-    }
-    .container input {
-        width: 100%;
-        clear: both;
-    }
-</style>
-<a href="Login">Log out</a>
-<input type ="radio" name = "activity" value ="walk_in"> Walk-in
-<input type ="radio" name = "activity" value ="class"> Class
-<input type ="radio" name = "activity" value ="appoint"> Appointment
-<input type ="radio" name = "activity" value ="workshop"> Workshop
-
-
-<body>
-	<div class = "container">
-		<form action = "Success" method = "post">
-			Name : <input type = "text" name = "name">
-			<br>
-			ID     : <input type = "text" name = "id" >
-			<br>
-			Phone Number : <input type = "text" name = "phone_number" >
-			<br>
-			Arrival Time : <input type ="text" name ="arrival_time">
-			<br>
-	</div>
-<center>
-	<font size = "3"> Enrollment Status</font>
+    <center>
+		<h1>Welcome to Career Services</h1>
+	</center>
+	<!-- took out the logout (Kelsey 10/13/16)-->
+<form action = "Success" method = "post" name="studentSignIn" onSubmit="validate();">
+	<input type ="radio" name = "visitType" value ="Walk In">Walk-in
+	<input type ="radio" name = "visitType" value ="Class">Class
+	<input type ="radio" name = "visitType"  value ="Appointment">Appointment
+	<input type ="radio" name = "visitType" value ="Workshop">Workshop
+	<center>
+		<br>
+			<input type = "text" name = "name" placeholder="Name">
+		<br>
+		<br>
+			<input type = "text" name = "id" placeholder="ID" font-size="90%">
+		<br>
+		<br>
+			<input type = "text" name = "email" placeholder="Kean E-mail" >
+		<br>
+		<br>
+			<input type = "text" name = "phoneNumber" placeholder="Phone Number" >
+		<br>
+		<br>
+			<input type ="text" name ="arrival" placeholder="Arrival Time">
+		<br>
+	</center>
+	<h2> Section A </h2>
+  	<center>
+	<h3><b><i>Enrollment Status</i></b></h3>
+  		<br>
+			<input type ="radio" name = "enTime" value ="Full Time"> Full-time
+			<input type ="radio" name = "enTime" value ="Part Time"> Part-time
+	</center>
 	<br>
-		Section A
+	<h2>Section B </h2>
+  	<center>
+		<input type ="radio" name = "enStat" value ="Freshmen"> Freshman<br>
+		<input type ="radio" name = "enStat" value ="Sophomore"> Sophomore<br>
+		<input type ="radio" name = "enStat" value ="Junior"> Junior<br>
+		<input type ="radio" name = "enStat" value ="Senior"> Senior<br>
+		<input type ="radio" name = "enStat" value ="Graduate"> Graduate Student<br>
+		<input type ="radio" name = "enStat" value ="Alumni"> Alumni<br>
+		<input type ="radio" name = "enStat" value ="Potential Student"> Potential Student<br>
+	</center>
 	<br>
-		<input type ="radio" name = "en_time" value ="full_time"> Full-time
-		<input type ="radio" name = "en_time" value ="part_time"> Part-time
-	<br>
-		Section B 
-	<br>
-	<input type ="radio" name = "en_stat" value ="fresh"> Freshman
-	<input type ="radio" name = "en_stat" value ="soph"> Sophmore
-	<input type ="radio" name = "en_stat" value ="juni"> Junior
-	<input type ="radio" name = "en_stat" value ="seni"> Senior
-	<input type ="radio" name = "en_stat" value ="grad"> Graduate Student
-	<input type ="radio" name = "en_stat" value ="alum"> Alumni
-	<input type ="radio" name = "en_stat" value ="poten"> Potential Student
-</center>
+	<center>
+	    <h3><i>Please check the boxes that apply to your visit</i></h3>
+		<br>
+		Career Counseling <input type ="checkbox" name = "careerCounseling" value ="Career Counseling"><br>
+		Job Searching <input type ="checkbox" name = "jobSearching" value ="Job Searching"><br>
+		Resume <input type ="checkbox" name = "resume" value ="Resume"><br>
+		Cover Letter <input type ="checkbox" name = "coverLetter" value ="Cover Letter"><br>
+		Mock Interview <input type ="checkbox" name = "mockInterview" value ="Mock Interview"><br>
+		Internship Information <input type ="checkbox" name = "internshipInformation" value ="Internship Information"><br>
+		Transition to Kean <input type ="checkbox" name = "transitionToKean" value ="Transition To Kean"><br>
+		Sophomore Seminar <input type ="checkbox" name = "sophomoreSeminar" value ="Sophomore Seminar"><br>
+		Junior Seminar <input type ="checkbox" name = "juniorSeminar" value ="Junior Seminar"><br>
+		Senior Seminar <input type ="checkbox" name = "seniorSeminar" value ="Senior Seminar"><br>
+		Career <input type ="checkbox" name = "career" value ="Career"><br>
+		Cops Test <input type ="checkbox" name = "copsTest" value ="Cops Test"><br>
+		Myers Briggs <input type ="checkbox" name = "myersBriggs" value ="Myers Briggs"><br>
+	</center>
 <br>
-<center>	
-	Please check the boxes that apply to your visit
-	<br>
-	Career Counseling <input type ="checkbox" name = "cc" value ="cc"><br>
-	Job Searching <input type ="checkbox" name = "js" value ="js"><br>
-	Resume <input type ="checkbox" name = "resume" value ="resume"><br>
-	Cover Letter <input type ="checkbox" name = "cov" value ="cov"><br>
-	Mock Interview <input type ="checkbox" name = "moc" value ="moc"><br>
-	Internship Information <input type ="checkbox" name = "ii" value ="ii"><br>
-	Transition to Kean <input type ="checkbox" name = "t2k" value ="t2k"><br>
-	Sophmore Seminar <input type ="checkbox" name = "ss" value ="ss"><br>
-	Junior Seminar <input type ="checkbox" name = "js" value ="js"><br>
-	Senior Seminar <input type ="checkbox" name = "sen_s" value ="sen_s"><br>
-	Career <input type ="checkbox" name = "car" value ="car"><br>
-	Cops Test <input type ="checkbox" name = "cops" value ="cops"><br>
-	Myers Briggs <input type ="checkbox" name = "mb" value ="mb"><br>
-
-</center>
-<br>
-<input type = "submit">
+<button type = "submit">Submit</button>
 </form>
-
 </body>
 </html>
