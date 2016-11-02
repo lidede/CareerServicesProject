@@ -1,15 +1,21 @@
-<!-- Created by Collins --> 
+<!-- Created by Collins -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <style>
+body{
+  background-color: #CCFFFF;
+  text-align: center;
+}
+
 form {
+    background-color: #FFFFFF;
     border: 10px solid #f1f1f1;
 }
 
 input[type=text], input[type=password] {
-    width: 100%;
+    width: 25%;
     padding: 12px 20px;
     margin: 10px 0;
     display: inline-block;
@@ -26,7 +32,7 @@ button {
     border: none;
     border-radius:20px;
     cursor: pointer;
-    width: 100%;
+    width: 25%;
 }
 
 .cancelbtn {
@@ -37,16 +43,16 @@ button {
 
 .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
+    margin: 10px 0 10px 0;
 }
 
 img.avatar {
-    width: 40%;
-    border-radius: 50%;
+    width: 17%;
+    border-radius: 40%;
 }
 
 .container {
-    padding: 16px;
+    padding: 10px;
 }
 
 span.psw {
@@ -55,32 +61,35 @@ span.psw {
 }
 </style>
 <body>
-    
 <center>
 <h2>Admin Log in</h2>
 </center>
-
-<form action="AdminHome" method="post">
+<form action="AdminHome"><!-- change to php -->
+    <center>
   <div class="imgcontainer">
     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Kean_University_Logo.svg/1034px-Kean_University_Logo.svg.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
-    <label><b>Kean E-Mail</b></label>
+    <label><b>Kean E-Mail </b></label>
+    <br>
     <input type="text" placeholder="Enter E-mail Address" name="username" required>
-
-	<label><b>Password</b></label>
+    <br>
+    <label><b>Password </b></label>
+    <br>
     <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">LET ME IN !</button>
+    <br>
+    <button type="submit"><b>LET ME IN !</b></button>
+    <br>
     <input type="checkbox" checked="checked"> Remember me
   </div>
+</center>
 
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
-<a href="StudentSignIn">Redirect to Student Sign In</a>
+<a href="StudentSignIn">Redirect to Student Form</a>
 </body>
 </html>
