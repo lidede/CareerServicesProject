@@ -2,7 +2,9 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
   <display-name>CareerServicesProject</display-name>
   <welcome-file-list>
-    <welcome-file>View/login.jsp</welcome-file>
+    <welcome-file>login.html</welcome-file>
+    <welcome-file>login.htm</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <servlet-name>ServletLogin</servlet-name>
@@ -60,12 +62,24 @@
     <servlet-name>ServletUpdate</servlet-name>
     <url-pattern>/Update</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>ServletFormCorrection</servlet-name>
     <servlet-class>com.careerServices.MainApp.ServletFormCorrection</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ServletFormCorrection</servlet-name>
     <url-pattern>/FormCorrection</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+    <servlet>
+    <servlet-name>ServletShowSemesterTable</servlet-name>
+    <servlet-class>com.careerServices.MainApp.ServletShowSemesterTable</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletShowSemesterTable</servlet-name>
+    <url-pattern>/ShowSemesterTable</url-pattern>
   </servlet-mapping>
 </web-app>
