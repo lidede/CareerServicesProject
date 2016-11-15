@@ -140,11 +140,11 @@ button {
           document.studentSignIn.phoneNumber.focus() ;
           return false;
        }
-       if( document.studentSignIn.arrive.value == "" || document.studentSignIn.arrive.value == null)
-       {
-          alert( "Please provide your arrive" );
-          document.studentSignIn.arrive.focus() ;
-          return false;
+     //  if( document.studentSignIn.arrive.value == "" || document.studentSignIn.arrive.value == null)
+     //  {
+     //     alert( "Please provide your arrive" );
+      //    document.studentSignIn.arrive.focus() ;
+     //     return false;
        }
        if( document.studentSignIn.enTime.value == "" || document.studentSignIn.enTime.value == null)
        {
@@ -190,7 +190,6 @@ button {
 			<input type = "text" name = "phoneNumber" placeholder="Phone Number" >
 		<br>
 		<br>
-			<input type ="text" name ="arrival" placeholder="Arrival Time">
 		<br>
 	</center>
 	<h2> Section A </h2>

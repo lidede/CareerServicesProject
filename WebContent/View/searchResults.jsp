@@ -32,6 +32,7 @@
 				<th>Career</th>
 				<th>Cops_Test</th>
 				<th>Myers_Briggs</th>
+				<th>Comment</th>
 				<th>Approve</th>
 				<th>Update</th>
 			</tr>
@@ -60,6 +61,7 @@
 					<td><c:out value="${results.career}"/></td>
 					<td><c:out value="${results.cops_Test}"/></td>
 					<td><c:out value="${results.myers_Briggs}"/></td>
+					<td><c:out value="${results.comment}"/></td>
 					<td>
 						<form action="FormCorrection" method="Post">
 							<input type="hidden" name="itemToCorrect" value="${results.dbId}"/>

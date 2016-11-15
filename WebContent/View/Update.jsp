@@ -36,6 +36,16 @@
 		<input type="hidden" name="UorA" value="postupdate"/>
 	</center>
 <br>
+<br>
+	<center>
+	
+	<br>
+	Comment:<INPUT value="" NAME="comment" TYPE="text" SIZE="29" onmouseover="this.style.borderColor='black';this.style.backgroundColor='plum'"  
+style="width: 106; height: 21"  
+onmouseout="this.style.borderColor='black';this.style.backgroundColor='#ffffff'" style="border-width:1px;border-color=black">
+    </center>
+<br>
+
 <input type = "submit" value= "Update"/>
 </form>
 </body>
