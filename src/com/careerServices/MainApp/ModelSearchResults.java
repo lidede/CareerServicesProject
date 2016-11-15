@@ -24,6 +24,15 @@ public class ModelSearchResults
 	private String cops_Test;
 	private String myers_Briggs;
 	private String approve;
+	private String comment;
+	
+	public String getcomment(){
+		return comment;
+	}
+	public void setcomment(String comment){
+		this.comment = comment;
+	}
+	
 	public String getApprove() {
 		return approve;
 	}

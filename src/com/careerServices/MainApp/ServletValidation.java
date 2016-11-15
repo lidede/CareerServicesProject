@@ -3,6 +3,7 @@ package com.careerServices.MainApp;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.Calendar; 
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -30,7 +31,14 @@ public class ServletValidation extends HttpServlet
 			String name = request.getParameter("name");
 			String email = request.getParameter("email");
 			String phoneNumber = request.getParameter("phoneNumber");
-			String arrival = request.getParameter("arrival");
+			//String arrival = request.getParameter("arrival");
+			
+			Calendar c = Calendar.getInstance();
+			int hour = c.get(Calendar.HOUR_OF_DAY);
+			int minute = c.get(Calendar.MINUTE);
+			String arrival = Integer.toString(hour) +":"+Integer.toString(minute);
+			
+			
 			String visitType = request.getParameter("visitType");
 			String enTime = request.getParameter("enTime"); 
 			String enStat = request.getParameter("enStat");
@@ -48,6 +56,7 @@ public class ServletValidation extends HttpServlet
 			String copsTest = request.getParameter("copsTest");
 			String myersbriggs = request.getParameter("myersBriggs");
 			String approved = "False";
+			
 			String query = "insert into student_form (ID,Name,Email,Phone_Number,Arrival,VisitType,EnrollmentTime,EnrollmentStatus,Career_Counseling,Job_Searching,Resume,Cover_Letter,Mock_Interview,Internship_Information,Transition_to_Kean,Sophomore_Seminar,Junior_Seminar,Senior_Seminar,Career,Cops_Test,Myers_Briggs,Approved)"
 					+ " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 			Connection conn = database.getDataSource().getConnection(); //create connection
@@ -75,13 +84,14 @@ public class ServletValidation extends HttpServlet
 			insert.setString(20, copsTest);
 			insert.setString(21, myersbriggs);
 			insert.setString(22, approved);
+			
 			insert.execute();
 			System.out.println("Query Executed");
 			request.setAttribute("id", id);
 			request.setAttribute("name", name);
 			request.setAttribute("email", email);
 			request.setAttribute("phoneNumber", phoneNumber);
-			request.setAttribute("arrival", arrival);
+			request.setAttribute("Arrival", arrival);
 			request.setAttribute("enTime", enTime);
 			request.setAttribute("enStat", enStat);
 			request.setAttribute("careerCounseling",careerCounseling);

@@ -61,6 +61,7 @@ public class ServletFormCorrection extends HttpServlet
 				msr.setCops_Test(rs.getString(21));
 				msr.setMyers_Briggs(rs.getString(22));
 				msr.setApprove("True");
+				
 				results.add(msr);
 			}
 			stmt.close();
@@ -110,6 +111,7 @@ public class ServletFormCorrection extends HttpServlet
 			String career = request.getParameter("career");
 			String copsTest = request.getParameter("copsTest");
 			String myersbriggs = request.getParameter("myersBriggs");
+			String comment = request.getParameter("comment");
 			try
 			{
 				String query = "UPDATE student_form " + 
@@ -125,6 +127,7 @@ public class ServletFormCorrection extends HttpServlet
 						+ "Senior_Seminar='"+seniorSeminar+"', "
 						+ "Career='"+career+"', "
 						+ "Cops_Test='"+copsTest+"', "
+						+ "comment='"+comment+"', "
 						+ "Myers_Briggs='"+myersbriggs+"' WHERE Row_Index = "+indexedItem;
 				System.out.println(query);
 				Connection conn = database.getDataSource().getConnection();
